@@ -806,6 +806,8 @@ img {
   width: 100%;
   padding: 10px;
   height: 100px;
+  word-break: break-all;
+  overflow-y: hidden
 }
 .aa-properties-item .aa-properties-item-content .aa-properties-about h3 {
   margin-top: 0px;

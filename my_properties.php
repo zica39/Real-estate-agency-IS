@@ -204,6 +204,7 @@
 				$pag_count = ceil($count/$limit);
 				$active = $offset + 1;
 			  ?>
+			  <?php if($count>0): ?>
               <nav>
                 <ul id = 'pag' class="pagination">
                   <li>
@@ -224,6 +225,7 @@
                   </li>
                 </ul>
               </nav>
+			  <?php endif; ?>
             </div>
           </div>
         </div>

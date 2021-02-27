@@ -168,10 +168,10 @@
 								<div class="controls">
 									<div class="row">
 										<div class="col-md-6">
-											<div class="form-group"> <label for="name">Username: </label> <input id="name" value = '<?=$account['ime']?>' type="text" name="name" class="form-control" placeholder="Please enter your username" required="required" data-error="Username is required."> </div>
+											<div class="form-group"> <label for="name">Username: </label> <input readonly id="name" value = '<?=$account['ime']?>' type="text" name="name" class="form-control" placeholder="Please enter your username" required="required" data-error="Username is required."> </div>
 										</div>
 										<div class="col-md-6">
-											<div class="form-group"> <label for="email">Email: </label> <input id="email" value = '<?=$account['email']?>' type="email" name="email" class="form-control" placeholder="Please enter your email" required="required" data-error="Email is required."> </div>
+											<div class="form-group"> <label for="email">Email: </label> <input  readonly id="email" value = '<?=$account['email']?>' type="email" name="email" class="form-control" placeholder="Please enter your email" required="required" data-error="Email is required."> </div>
 										</div>
 									</div>
 									
@@ -221,7 +221,7 @@
 											<div class="form-group"> <label for="user">DB User: </label> <input id="user" value = '<?=$conf['username']?>' type="text" name="user" class="form-control" placeholder="Please enter your username" required="required" data-error="Username is required."> </div>
 										</div>
 										<div class="col-md-6">
-											<div class="form-group"> <label for="password">DB Password: </label> <input id="password" value = '<?=$conf['password']?>' type="password" name="password" class="form-control" placeholder="Please enter your password" data-error="password is required."> </div>
+											<div class="form-group"> <label for="password1">DB Password: </label> <input id="password1" value = '<?=$conf['password']?>' type="password" name="password" class="form-control" placeholder="Please enter your password" data-error="password is required."> </div>
 										</div>
 									</div>
 									
@@ -250,10 +250,10 @@
 								<div class="controls">
 									<div class="row">
 										<div class="col-md-6">
-											<div class="form-group"> <label for="name">Agency Name: </label> <input id="name" value = '<?=$agency['naziv']?>' type="text" name="name" class="form-control" placeholder="Please enter your Estate Agency Name" required="required" data-error="Agency name is required."> </div>
+											<div class="form-group"> <label for="name1">Agency Name: </label> <input id="name1" value = '<?=$agency['naziv']?>' type="text" name="name" class="form-control" placeholder="Please enter your Estate Agency Name" required="required" data-error="Agency name is required."> </div>
 										</div>
 										<div class="col-md-6">
-											<div class="form-group"> <label for="email">Agency email: </label> <input id="email" value = '<?=$agency['email']?>' type="email" name="email" class="form-control" placeholder="Please enter your agency contact email" required="required" data-error="Agency email is required."> </div>
+											<div class="form-group"> <label for="email1">Agency email: </label> <input id="email1" value = '<?=$agency['email']?>' type="email" name="email" class="form-control" placeholder="Please enter your agency contact email" required="required" data-error="Agency email is required."> </div>
 										</div>
 									</div>
 									<div class="row mt-2">

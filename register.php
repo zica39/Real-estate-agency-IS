@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
 			$error = 'Korisnicko ime vec postoji';
 			$errorArr[] = 'name';
 		}
-		if(!nameValidaiton($email)){
+		if(!nameValidaiton($ime)){
 			$error = 'Neispravan format korisnickog imena';
 			$errorArr[] = 'name';
 		}
@@ -52,7 +52,7 @@ if(isset($_POST['submit'])){
 			$error = 'Lozinke se ne podudaraju';
 			$errorArr[] = 'password';
 		}
-		if(!passwordValidation($email)){
+		if(!passwordValidation($password)){
 			$error = 'Lozinka je preslaba';
 			$errorArr[] = 'password';
 		}
@@ -67,7 +67,7 @@ if(isset($_POST['submit'])){
 		
 		if($rez)$msg = 'Uspjesna registracija';
 		else $error = 'Greska pri upisu podataka';	
-	
+		header("Refresh: 3; url=signin.php");
 	}	
 }
 ?>
@@ -145,7 +145,8 @@ if(isset($_POST['submit'])){
                   <input type="password" name="confirm-password"> 
                 </div>
                 <div class="aa-single-submit">
-                  <input type="submit" value="Kreiraj nalog" name="submit">                    
+                  <input type="submit" value="Kreiraj nalog" name="submit"> 
+					<p>Imate nalog? <a href="signin.php">PRIJAVA!</a></p>
                 </div>
               </form>
             </div>

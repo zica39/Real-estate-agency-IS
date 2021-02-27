@@ -611,9 +611,9 @@ function emailValidation($email)
 
 function nameValidaiton($username){	
 	
-	return true;
+	//return true;
 	
-	if (preg_match('/^[a-z\d_]{5,20}$/i', $username)) {
+	if (preg_match('/^[a-z\d_]{3,20}$/i', $username)) {
 	return true;
 	} else {
 	return false;
@@ -622,17 +622,14 @@ function nameValidaiton($username){
 
 function passwordValidation($password){
 	
-	return (strlen($password) < 8)?false:true;
-	
 	$uppercase = preg_match('@[A-Z]@', $password);
 	$lowercase = preg_match('@[a-z]@', $password);
 	$number    = preg_match('@[0-9]@', $password);
 
 	if(!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
-	  return false;
+		return false;
 	}
-	
-	return true;
+		return true;
 }
 
 function getUser(){

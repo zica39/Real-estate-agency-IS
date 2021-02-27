@@ -153,13 +153,13 @@ if(isset($_POST['submit'])){
 											<div class="form-group"> <label for="tel">Telephone: </label> <input id="tel" type="tel" name="tel" class="form-control" placeholder="Please enter your agency telephone" required="required" data-error="Agency telephone is required."> </div>
 										</div>
 										<div class="col-md-6">
-											<div class="form-group"> <label for="address">Address: </label> <input id="address" type="text" name="address" class="form-control" placeholder="Please enter your agency address" data-error="Address is required."> </div>
+											<div class="form-group"> <label for="address">Address: </label> <input id="address" required type="text" name="address" class="form-control" placeholder="Please enter your agency address" data-error="Address is required."> </div>
 										</div>
 									</div>
 									
 									<div class="row mt-4">
 										<div class="col-md-6">
-											<div class="form-group"> <label for="email_host">Email Host: </label> <input id="email_host" type="text" name="email_host" class="form-control" placeholder="Email Host" required="required" data-error="Email host is required."> </div>
+											<div class="form-group"> <label for="email_host">Email Host: </label> <input id="email_host" type="text" name="email_host" class="form-control" placeholder="Email Host"  data-error="Email host is required."> </div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group"> <label for="email_username">Email username: </label> <input id="email_username" type="text" name="email_username" class="form-control" placeholder="Email username@host" data-error="Email username is required."> </div>
@@ -168,7 +168,7 @@ if(isset($_POST['submit'])){
 									
 									<div class="row mt-4">
 										<div class="col-md-6">
-											<div class="form-group"> <label for="email_password">Email Password: </label> <input id="email_password" type="password" name="email_password" class="form-control" placeholder="Email Password" required="required" data-error="Email password is required."> </div>
+											<div class="form-group"> <label for="email_password">Email Password: </label> <input id="email_password" type="password" name="email_password" class="form-control" placeholder="Email Password" data-error="Email password is required."> </div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group"> <label for="api_key">API key: </label> <input id="api_key" type="text" name="api_key" class="form-control" placeholder="Google map api key" data-error="API key is required."> </div>

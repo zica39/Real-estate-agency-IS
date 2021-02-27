@@ -209,7 +209,7 @@
 				</div>
 				
 				<h4>Opis:</h4>
-				<p><b></b><?=$nekretnina['opis']?></p>
+				<p style='word-break: break-all;'><b></b><?=$nekretnina['opis']?></p>
 				
 				
 			  

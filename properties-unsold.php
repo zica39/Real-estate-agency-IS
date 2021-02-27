@@ -10,7 +10,7 @@
 	$korisnik_id = $user['id'];
 	$id = $_GET['id'];
 	
-	$del = mysqli_query($db_conn,"Update nekretnina SET status=1 WHERE korisnik_id = $korisnik_id AND id = $id");
+	$del = mysqli_query($db_conn,"Update nekretnina SET status=1, datum_prodaje=null WHERE korisnik_id = $korisnik_id AND id = $id");
 	
 	if($del){
 		header("Location:./properties-detail.php?id=$id");	

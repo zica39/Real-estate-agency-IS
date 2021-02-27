@@ -28,6 +28,10 @@ if(isset($_POST['submit'])){
 	$svojstva = isset($_POST['svojstva'])?$_POST['svojstva']:false;
 	
 	$status =  isset($_POST['status'])?$_POST['status']:false;
+	
+	if($status == 2)$datum_prodaje = 'CURDATE()';
+	else $datum_prodaje = 'null';
+	
 	$korisnik_id = $user['id'];
 	$id_nekretnine = $_GET['id'];
 	
@@ -35,7 +39,7 @@ if(isset($_POST['submit'])){
 	die(); */
 	
 	$rez = mysqli_query($db_conn,"UPDATE nekretnina SET tip_oglasa=$tip_oglasa, tip_nekretnine=$tip_nekretnine, status=$status,
-	grad=$grad, cijena=$cijena, opis='$opis', godina_izgradnje=YEAR('$godina_izgradnje'), telefon='$telefon', adresa='$adresa', svojstva='$svojstva'
+	grad=$grad, cijena=$cijena, opis='$opis', godina_izgradnje=YEAR('$godina_izgradnje'), telefon='$telefon', adresa='$adresa', svojstva='$svojstva', datum_prodaje = $datum_prodaje
 	WHERE korisnik_id = $korisnik_id AND id = $id_nekretnine");
 	
 	if($rez){

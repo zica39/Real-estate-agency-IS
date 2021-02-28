@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
 	die(); */
 	
 	$rez = mysqli_query($db_conn,"UPDATE nekretnina SET tip_oglasa=$tip_oglasa, tip_nekretnine=$tip_nekretnine, status=$status,
-	grad=$grad, cijena=$cijena, opis='$opis', godina_izgradnje=YEAR('$godina_izgradnje'), telefon='$telefon', adresa='$adresa', svojstva='$svojstva', datum_prodaje = $datum_prodaje
+	grad=$grad, cijena=$cijena, opis='$opis', godina_izgradnje='$godina_izgradnje', telefon='$telefon', adresa='$adresa', svojstva='$svojstva', datum_prodaje = $datum_prodaje
 	WHERE korisnik_id = $korisnik_id AND id = $id_nekretnine");
 	
 	if($rez){
@@ -343,7 +343,20 @@ if(isset($_POST['submit'])){
 					  <label for="godina_izgradnje">Godina izgradnje</label>
 					</div>
 					<div class="col-75">
-						 <input type="date" id="godina_izgradnje" name="godina_izgradnje" value="<?=$nekretnina['godina_izgradnje']?>-01-01" size="30" >
+						<select id="godina_izgradnje" name="godina_izgradnje" required>
+							<option selected="" value="" hidden>--Odaberi godinu--</option>
+							<?php 
+							$trenutna_godina = intval(date('Y'));
+							$godina = $trenutna_godina;
+							$min_godina = 1900;
+							
+							while($godina>=$min_godina){
+								$sel = ($godina == $nekretnina['godina_izgradnje'])?'selected':'';
+								echo "<option $sel value = '$godina' >$godina</option>";
+								$godina--;
+							}
+							?>
+						  </select>
 					</div>
 				  </div>
 				  

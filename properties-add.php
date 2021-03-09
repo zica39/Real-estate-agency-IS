@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
 	die(); */
 	
 	$rez = mysqli_query($db_conn,"INSERT INTO nekretnina (tip_oglasa,korisnik_id,tip_nekretnine,status,grad,cijena,povrsina,opis,godina_izgradnje,telefon,adresa,svojstva) 
-	VALUES($tip_oglasa,$korisnik_id,$tip_nekretnine,$status,$grad, $cijena, $povrsina, '$opis', YEAR('$godina_izgradnje'),'$telefon','$adresa','$svojstva' )");
+	VALUES($tip_oglasa,$korisnik_id,$tip_nekretnine,$status,$grad, $cijena, $povrsina, '$opis', '$godina_izgradnje','$telefon','$adresa','$svojstva' )");
 	
 	$new_id = mysqli_insert_id($db_conn);
 	
@@ -310,7 +310,19 @@ if(isset($_POST['submit'])){
 					  <label for="godina_izgradnje">Godina izgradnje</label>
 					</div>
 					<div class="col-75">
-						 <input type="date" id="godina_izgradnje" name="godina_izgradnje" value="" size="30" >
+						 <select id="godina_izgradnje" name="godina_izgradnje" required>
+							<option selected="" value="" hidden>--Odaberi godinu--</option>
+							<?php 
+							$trenutna_godina = intval(date('Y'));
+							$godina = $trenutna_godina;
+							$min_godina = 1900;
+							
+							while($godina>=$min_godina){
+								echo "<option value = '$godina' >$godina</option>";
+								$godina--;
+							}
+							?>
+						  </select>
 					</div>
 				  </div>
 				  

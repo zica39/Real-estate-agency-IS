@@ -171,7 +171,7 @@
 				<small><p><b>Datum postavljanja: </b> <?=date($nekretnina['datum_postavljanja'])?> <span style = 'float:right;'>👁️‍🗨️ <?=$nekretnina['broj_pregleda']?></span></p></small>
                <h2><?=ucfirst($nekretnina['tip_nekretnine'])?> -  
 					<?=$nekretnina['povrsina']?>m<sup>2</sup> -
-					<?=$nekretnina['cijena']?> €
+					<?=number_format($nekretnina['cijena'])?> €
 					
 					
 					<?php if(is_array($user))if($user['id'] == $nekretnina['korisnik_id']): ?>
@@ -195,7 +195,7 @@
 					   <?php if($nekretnina['datum_prodaje']): ?><p><b>Datum prodaje: </b> <?=$nekretnina['datum_prodaje']?></p><?php endif; ?>
 					   <p><b>Lokacija: </b>Crna-Gora / <?=$nekretnina['grad_naziv']?></p>
 					   <p><b>Povrsina: </b><?=$nekretnina['povrsina']?>m<sup>2</sup></p>
-					   <p><b>Cijena: </b><?=$nekretnina['cijena']?> €</p>
+					   <p><b>Cijena: </b><?=number_format($nekretnina['cijena'])?> €</p>
 					   <p><b>Godina izgradnje: </b> <?=$nekretnina['godina_izgradnje']??'N/A'?></p>
 				   </div>
 				    <div class="col-md-6">

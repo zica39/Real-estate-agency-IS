@@ -106,7 +106,7 @@
                             <h5 class="card-header">Nekretnine</h5>
                             <div class="card-body">
                               <h5 class="card-title">Ukupna vrijednost:</h5>
-							  <h3 class="card-title float-right"><?=getPropertiesValue()?> €</h3>
+							  <h3 class="card-title float-right"><?=number_format(getPropertiesValue())?> €</h3>
                             </div>
                           </div>
                     </div>
@@ -115,7 +115,7 @@
                             <h5 class="card-header">Prodaja</h5>
                             <div class="card-body">
                               <h5 class="card-title">Ukupan prihod:</h5>
-							  <h3 class="card-title float-right"><?=getRevenue()?> €</h3>
+							  <h3 class="card-title float-right"><?=number_format(getRevenue())?> €</h3>
                             </div>
                           </div>
                     </div>

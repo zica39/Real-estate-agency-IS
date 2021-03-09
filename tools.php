@@ -117,7 +117,7 @@ global $db_conn,$config;
 				<h6 class="aa-top-slider-catg" style='letter-spacing:1px;'><?=$nek['adresa']?></h6>
 				<p class="aa-top-slider-location"><i class="fa fa-map-marker"></i><?=$nek['grad_naziv']?>, Crna Gora</p>
 				<span class="aa-top-slider-off">(<?=ucfirst($nek['tip_oglasa'])?>)</span>
-				<p class="aa-top-slider-price"><?=$nek['cijena']?> €</p>
+				<p class="aa-top-slider-price"><?=number_format($nek['cijena'])?> €</p>
 				<a href="properties-detail.php?id=<?=$nek['id']?>" class="aa-top-slider-btn">Detalji <span class="fa fa-angle-double-right"></span></a>
 			  </div>
 			  <!-- / Top slider content -->
@@ -226,7 +226,7 @@ global $db_conn;
                 <div class="media-body">
                   <h4 class="media-heading"><a href="properties-detail.php?id=<?=$id?>"><?=ucfirst($tip_nekretnine)?></a></h4>
                   <p><?=$opis?></p>                
-                  <span> <?=$cijena?> €</span>
+                  <span> <?=number_format($cijena)?> €</span>
                 </div>              
               </div>
             <?php } 
@@ -300,7 +300,7 @@ function draw_cards(){
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
-                      <?=$cijena?> €
+                      <?=number_format($cijena)?> €
                     </span>
                     <a href="properties-detail.php?id=<?=$id?>" class="aa-secondary-btn">Pogledaj detalje</a>
                   </div>
@@ -369,7 +369,7 @@ function draw_cards_nearby($id,$tip_oglasa,$tip_nekretnine,$grad){
 			  </div>
 			  <div class="aa-properties-detial">
 				<span class="aa-price">
-				  <?=$cijena?> €
+				  <?=number_format($cijena)?> €
 				</span>
 				<a href="properties-detail.php?id=<?=$id?>" class="aa-secondary-btn">Pogledaj detalje</a>
 			  </div>
@@ -479,7 +479,7 @@ function draw_cards_list(){
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
-                      <?=$cijena?> €
+                      <?=number_format($cijena)?> €
                     </span>
                     <a href="properties-detail.php?id=<?=$id?>" class="aa-secondary-btn">Pogledaj detalje</a>
                   </div>
@@ -587,7 +587,7 @@ function draw_cards_list_my(){
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
-                      <?=$cijena?> €
+                      <?=number_format($cijena)?> €
                     </span>
                     
 					 <a data-del href="properties-remove.php?id=<?=$id?>" title = 'Obrisi oglas' class="aa-secondary-btn a-m1"><i class="fa fa-trash"></i></a>
@@ -767,7 +767,7 @@ function get_admin_list(){
 			<th scope="row"><?=$row['id']?></th>
 			<td><?=$row['naziv']?></td>
 			<td><?=$row['email']?></td>
-			<td><?=$row['cijena']?></td>
+			<td><?=number_format($row['cijena'])?></td>
 			<td><?=$row['datum_postavljanja']?></td>
 			<td><a href="../properties-detail.php?id=<?=$row['id']?>" class="btn btn-sm btn-primary">Detalji</a></td>
 		  </tr>
